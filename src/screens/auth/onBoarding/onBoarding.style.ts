@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Typography } from "../../../constant";
+import { Colors, Typography } from "../../../constant";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -8,22 +8,20 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: Colors.PRIMARY[300],
   },
   informationContainer: {
-    marginBottom: hp(2),
     margin: hp(2),
+    flex: 1,
   },
 
-  screenTitleView: {
-    alignItems: "center",
-    justifyContent: "center",
+  actionButton: {
+    alignSelf: "center",
+    marginBottom: hp(2),
   },
-  screenTitleText: {
-    ...Typography.H3Semibold24,
-  },
-  logOutButton: {
-    width: wp(90),
-    marginTop: hp(5),
+  countinueButton: {
+    marginTop: hp(3),
+    width: wp(100),
   },
 });
 

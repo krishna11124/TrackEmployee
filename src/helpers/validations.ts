@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-const VerifyNumberValidationSchema = Yup.object().shape({
+const LoginValidationSchema = Yup.object().shape({
   email: Yup.string()
   .required("Please enter email address")
   .matches(
@@ -12,5 +12,5 @@ const VerifyNumberValidationSchema = Yup.object().shape({
 
 
 export {
-  VerifyNumberValidationSchema,
+  LoginValidationSchema,
 };

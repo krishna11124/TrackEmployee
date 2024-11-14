@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Typography } from "../../../constant";
+import { Colors, Typography } from "../../../constant";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -8,6 +8,7 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:Colors.PRIMARY[300]
   },
   informationContainer: {
     marginBottom: hp(2),

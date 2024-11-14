@@ -4,5 +4,6 @@ import Login from './auth/login/login';
 
 //App
 import HomePage from './home/homePage/homePage';
+import MyProfile from './home/myProfile/myProfile';
 
-export {OnBoarding, Login, HomePage};
+export {OnBoarding, Login, HomePage,MyProfile};

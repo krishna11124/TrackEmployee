@@ -31,68 +31,6 @@ const Route: FC = () => {
     }
   };
 
-  // //For Real Device only
-  // useEffect(() => {
-  //   initializeFCM();
-  // }, []);
-
-  // const initializeFCM = async () => {
-  //   const hasPermission = await requestUserPermission();
-  //   if (hasPermission) {
-  //     try {
-  //       const token = await messaging().getToken();
-  //       console.log("tokentoken", token);
-
-  //       if (token) {
-  //         await LocalStorage.save("@fcmToken", token);
-  //       } else {
-  //         Toast.show({
-  //           type: "error",
-  //           text1: "Please enable notification permission from app setting!",
-  //         });
-  //       }
-  //     } catch (error) {
-  //       console.log("errorerror", error);
-  //       Toast.show({
-  //         type: "error",
-  //         text1: "Please enable notification permission from app setting!",
-  //       });
-  //     }
-  //   } else {
-  //     Toast.show({
-  //       type: "error",
-  //       text1: "Please enable notification permission from app setting!",
-  //     });
-  //   }
-  // };
-
-  // const requestUserPermission = async () => {
-  //   try {
-  //     if (Platform.OS === "android" && Platform.Version >= 33) {
-  //       const result = await request(PERMISSIONS.ANDROID.POST_NOTIFICATIONS);
-  //       if (result === RESULTS.GRANTED) {
-  //         return true;
-  //       } else {
-  //         Toast.show({
-  //           type: "error",
-  //           text1: "Please enable notification permission from app setting!",
-  //         });
-  //       }
-  //     } else {
-  //       const authStatus = await messaging().requestPermission();
-  //       return (
-  //         authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-  //         authStatus === messaging.AuthorizationStatus.PROVISIONAL
-  //       );
-  //     }
-  //   } catch (error) {
-  //     Toast.show({
-  //       type: "error",
-  //       text1: "Please enable notification permission from app setting!",
-  //     });
-  //     return false;
-  //   }
-  // };
 
   //removed loading authscreen in first instance because of the null(false) for userLogin
   if (userLogin === undefined || userLogin === "null") return <></>;

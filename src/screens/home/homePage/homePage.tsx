@@ -20,15 +20,6 @@ type HomePageScreenNavigationType = NativeStackNavigationProp<
 const HomePage = () => {
   const navigation = useNavigation<HomePageScreenNavigationType>();
   const { setIsLoggedIn, userData } = useContext<UserData>(UserDataContext);
-  const { isDarkMode, setDarkmode } = useContext<UserData>(UserDataContext);
-  const [isEnabled, setIsEnabled] = useState(
-    isDarkMode === "dark" ? true : false
-  );
-  const background =
-    isDarkMode === "dark" ? Colors.PRIMARY[400] : Colors.PRIMARY[300];
-  const textColor =
-    isDarkMode === "dark" ? Colors.PRIMARY[300] : Colors.PRIMARY[400];
-
 
   const signout = async () => {
     handleSignout(setIsLoggedIn);
@@ -39,7 +30,7 @@ const HomePage = () => {
   };
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: background }]}>
+    <SafeAreaView style={[styles.container]}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={{ flexGrow: 1 }}
@@ -48,9 +39,7 @@ const HomePage = () => {
         {/* Information Container */}
         <View style={styles.informationContainer}>
           <View style={styles.screenTitleView}>
-            <TextView style={[styles.screenTitleText, { color: textColor }]}>
-              Home Page
-            </TextView>
+            <TextView style={[styles.screenTitleText]}>Home Page</TextView>
           </View>
           <View>
             <Button

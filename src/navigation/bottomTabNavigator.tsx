@@ -23,15 +23,12 @@ const ProfilePageStack = () => (
 
 const BottomStackNavigator: FC = () => {
   const Tab = createBottomTabNavigator();
-  const { isDarkMode } = useContext<UserData>(UserDataContext);
-  const background =
-    isDarkMode === "dark" ? Colors.PRIMARY[400] : Colors.PRIMARY[300];
 
   return (
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: background,
+          backgroundColor: Colors.PRIMARY[300],
           borderTopColor: "transparent",
           borderTopWidth: 0,
         },
@@ -46,17 +43,9 @@ const BottomStackNavigator: FC = () => {
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon
-              family="AntDesign"
-              name="search1"
-              color={
-                focused
-                  ? isDarkMode
-                    ? Colors.PRIMARY[100]
-                    : Colors.PRIMARY[100]
-                  : isDarkMode
-                  ? Colors.FLOATINGINPUT[100]
-                  : Colors.FLOATINGINPUT[100]
-              }
+              family="Entypo"
+              name="home"
+              color={focused ? Colors.PRIMARY[100] : Colors.FLOATINGINPUT[100]}
               size={22}
             />
           ),
@@ -69,17 +58,9 @@ const BottomStackNavigator: FC = () => {
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon
-              family="AntDesign"
-              name="pluscircleo"
-              color={
-                focused
-                  ? isDarkMode
-                    ? Colors.PRIMARY[100]
-                    : Colors.PRIMARY[100]
-                  : isDarkMode
-                  ? Colors.FLOATINGINPUT[100]
-                  : Colors.FLOATINGINPUT[100]
-              }
+              family="FontAwesome"
+              name="user"
+              color={focused ? Colors.PRIMARY[100] : Colors.FLOATINGINPUT[100]}
               size={22}
             />
           ),

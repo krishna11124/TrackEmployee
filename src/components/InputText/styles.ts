@@ -14,6 +14,16 @@ const styles = StyleSheet.create({
     maxWidth: wp(90),
     ...Typography.BodyRegular12,
   },
+  secureBtn: {
+    position: 'absolute',
+    right: 15,
+    top: 20,
+},
+eyeStyle: {
+    height: wp(5),
+    width: wp(5),
+    resizeMode: 'contain',
+}
 });
 
 export default styles;
